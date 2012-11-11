@@ -1,0 +1,52 @@
+body
+  background: $bg_color
+  color: $text_color
+  padding: 40px
+  font-size: 14px
+  line-height: 150%
+  font-family: Helvetica, Arial, sans-serif
+  +mq-tablet
+    background: darken($bg_color, 50%)
+  +mq-mobile
+    background: invert($bg_color)
+
+
+h1
+  font-size: 12px
+  line-height: 50px
+
+  .comments
+    font-size: 12px
+    background: red
+
+h2
+  font-size: 26px
+  line-height: 30px
+
+header
+  border-bottom: 1px dotted darken($bg_color,60%)
+  padding-bottom: 20px
+  margin-bottom: 20px
+
+  h1
+    border-bottom: 1px dotted darken($bg_color,60%)
+    padding-bottom: 15px
+
+
+article
+  p
+    margin-bottom: 20px
+
+.mpu
+  width: 300px
+  height: 250px
+  padding: 10px
+  background: darken($bg_color,10%)
+  overflow: hidden
+  float: right
+  margin: 0 0px 20px 20px
+  // margin: top right bottom left
+
+  img
+    width: 300px
+    height: 250px

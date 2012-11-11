@@ -1,0 +1,110 @@
+// GRID taken from Twitter bootstrap 2.0.3
+// --------------------------------------------------
+// The Grid
+=gridCore($grid_column_width, $grid_gutter_width)
+  [class*="span"]
+    float: left
+    margin-left: $grid_gutter_width
+  @for $i from 1 through $grid_columns
+    .span#{$i}
+      +gridCoreSpan($i, $grid_column_width, $grid_gutter_width)
+  @for $i from 1 through $grid_columns
+    .offset#{$i}
+      +gridCoreOffset($i, $grid_column_width, $grid_gutter_width)
+  .row
+    margin-left: $grid_gutter_width * -1
+    +clearfix
+  .container
+    +gridCoreSpan($grid_columns, $grid_column_width, $grid_gutter_width)
+
+=gridCoreSpan($columns, $grid_column_width, $grid_gutter_width)
+  width: $grid_column_width * $columns + $grid_gutter_width * ($columns - 1)
+
+=gridCoreOffset($columns, $grid_column_width, $grid_gutter_width)
+  margin-left: $grid_column_width * $columns + $grid_gutter_width * ($columns - 1) + $grid_gutter_width * 2
+
+=gridFluid($fluid_grid_column_width, $fluid_grid_gutter_width)
+  .row-fluid
+    width: 100%
+    +clearfix
+    > [class*="span"]
+      float: left
+      margin-left: $fluid_grid_gutter_width
+    > [class*="span"]:first-child
+      margin-left: 0
+    @for $i from 1 through $grid_columns
+      > .span#{$i}
+        +gridFluidSpan($i, $fluid_grid_column_width, $fluid_grid_gutter_width)
+
+=gridFluidSpan($columns, $fluid_grid_column_width : $fluid_grid_column_width , $fluid_grid_gutter_width : $fluid_grid_gutter_width)
+  width: $fluid_grid_column_width * $columns + $fluid_grid_gutter_width * ($columns - 1)
+
+// Centered container element
+=container-fixed
+  margin-left: auto
+  margin-right: auto
+  +clearfix
+
+// LAYOUTS
+// Fixed-width and fluid
+// ----------------------
+
+// Container (centered, fixed-width layouts)
+.container
+  +container-fixed
+
+// Fluid layouts
+.container-fluid
+  padding-left: $grid_gutter_width
+  padding-right: $grid_gutter_width
+  +clearfix
+
+// Fixed (940px)
++gridCore($grid_column_width, $grid_gutter_width)
+
+// Fluid (940px)
++gridFluid($fluid_grid_column_width, $fluid_grid_gutter_width)
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
++mq-mobile
+  // Remove width from containers
+  .container
+    padding-left: 20px
+    padding-right: 20px
+    width: auto
+  // Fluid rows
+  .row-fluid
+    width: 100%
+  // Undo negative margin on rows
+  .row
+    margin-left: 0
+  // Make all columns even
+  .row > [class*="span"], .row-fluid > [class*="span"]
+    float: none
+    display: block
+    width: auto
+    margin: 0
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
++mq-tablet
+  // Fixed grid
+  +gridCore($grid_small_column_width, $grid_small_gutter_width)
+  // Fluid grid
+  +gridFluid(5.801%, 2.762%)
+
+
+// LARGE DESKTOP & UP
+// ------------------
++mq-wide
+  // Fixed grid
+  +gridCore($grid_large_column_width, $grid_large_gutter_width)
+  // Fluid grid
+  +gridFluid(5.983%, 2.564%)
+
+
+
+
+

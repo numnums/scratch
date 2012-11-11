@@ -1,0 +1,50 @@
+// ----------------------------------
+// MEDIA QUERY MIXINS. SASS 3.2+ only
+// ----------------------------------
+=mq-iphone-port
+  @media (max-width: 320px)
+    @content
+
+=mq-iphone-land
+  @media (max-width: 480px)
+    @content
+
+=mq-mobile
+  @media (max-width: 767px)
+    @content
+
+=mq-tablet-min
+  @media (min-width: 768px)
+    @content
+
+=mq-tablet-port
+  @media (max-width: 768px)
+    @content
+
+=mq-tablet
+  @media (min-width: 768px) and (max-width: 979px)
+    @content
+
+=mq-tablet-max
+  @media (max-width: 979px)
+    @content
+
+=mq-desktop
+  @media (min-width: 980px)
+    @content
+
+=mq-desktop-max
+  @media (max-width: 1209px)
+    @content
+
+=mq-wide
+  @media (min-width: 1210px)
+    @content
+
+=mq-super
+  @media (min-width: 1460px)
+    @content
+
+=retina
+  @media only screen and (#{-webkit-min-device-pixel-ratio}: #{1.5}), only screen and (#{min-device-pixel-ratio}: #{1.5})
+    @content
