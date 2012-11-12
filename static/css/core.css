@@ -575,20 +575,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   background: #e3e6e8;
   color: #17191c;
-  padding: 40px;
+  padding-left: 40px;
   font-size: 14px;
   line-height: 150%;
   font-family: Helvetica, Arial, sans-serif;
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  body {
-    background: #5c6670;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    background: #1c1917;
-  }
 }
 
 h1 {
@@ -631,58 +621,4 @@ article p {
 .mpu img {
   width: 300px;
   height: 250px;
-}
-
-#collin {
-  font-size: 16px;
-  line-height: 1.5;
-}
-#collin h1 {
-  font-size: 54px;
-  margin-bottom: 20px;
-}
-#collin h2 {
-  font-family: georgia;
-  font-style: italic;
-  font-size: 24px;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-#collin .byline {
-  margin-left: 80px;
-}
-#collin .avatar {
-  width: 75px;
-  height: 75px;
-  background: blue;
-  float: left;
-  margin-right: 15px;
-}
-#collin .editordata {
-  padding-left: 20px;
-}
-#collin .editordata #editorname {
-  font-weight: bold;
-}
-#collin .editordata #editortitle {
-  font-size: 12px;
-}
-#collin .boxshot {
-  text-align: center;
-  width: 150px;
-  height: 200px;
-  background: red;
-  float: left;
-  margin: 5px 20px 5px -100px;
-}
-#collin .blue {
-  font-size: 24px;
-  background: blue;
-}
-#collin .red {
-  font-size: 16px;
-  background: red;
-}
-#collin .mpu {
-  margin: 0 -100px 20px 20px;
 }
