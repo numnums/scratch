@@ -1,0 +1,8 @@
+# Sass
+.sass-cache/
+
+# CSS
+*.css
+*.ds_store
+*.pyc
+build/
