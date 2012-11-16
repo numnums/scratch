@@ -1,9 +1,28 @@
+@import animate.sass
+
 .logo 
-	display: inline
+	float:left
 
 .headerbg
 	width: 100%
-	height: 80px
-	position: absolute
+	height: 95px
+	position: fixed
 	z-index: -1
 	background-color: hsl(360, 0%, 96%)
+
+.logomark
+	float: left
+	position: fixed
+	+animate(bounceIn)
+
+.betatype
+	color: hsl(360, 0%, 50%)
+	font-family: jubilat-Light
+	font-size: 50px
+	letter-spacing: .0025em
+	padding-top: 45px
+	padding-left: 150px
+	position: fixed
+
+	.numnums
+		font-size: 22px
