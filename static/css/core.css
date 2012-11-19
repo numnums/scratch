@@ -3292,11 +3292,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
+header {
+  z-index: 1000;
+}
+
 .headerbg {
   width: 100%;
   height: 95px;
   position: fixed;
-  z-index: -1;
   background-color: whitesmoke;
 }
 
@@ -3321,6 +3324,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 .betatype .numnums {
   font-size: 22px;
+}
+
+.top_padding {
+  height: 100px;
+}
+
+.form {
+  width: 900px;
+  margin: 0 0 0 95px;
+  z-index: -1000;
 }
 
 body {
