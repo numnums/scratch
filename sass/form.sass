@@ -2,12 +2,22 @@
 @import compass/css3, compass/utilities
 
 body
-  
-  background-color: hsla(1, 0, 0, .75)
+  +background-image(../static/images(background.png))
 
-  h2
+  h1
     color: white
-    font-size: 20px
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 100
+    font-size: 22px
+    line-height: .1
+    margin-top: 30px
+
+  .cta
+    color: white
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 100
+    font-size: 14px
+    margin: (0 0 20 0)
 
   .form 
     width: 100%
@@ -16,29 +26,27 @@ body
     height: 50px
     background: none
     overflow: hidden
-    padding-bottom: 1px
+    padding-bottom: 2px
 
   button 
     width: 100%
     height: 100%
     padding: (10px 10px 0px 10px)
     display: block
-    float: left
     text-align: left
     vertical-align: middle
     color: white
-    font-family: helveticaneue-light
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
     font-size: 16px
-    border-width: 1px
-    border-top-style: solid white
-    background: gray
+    border: 0
+    +background-image(linear-gradient(#8d8d8d, #6c6c6c))
     text-decoration: inherit
     +border-radius(5px)
     cursor: inherit
     &:active, &:focus
       outline: none
     &:hover
-      background-color: hsla(200, 50, 50, 1)
+      +background-image(linear-gradient(#44a9fe, #0670ca))
 
   .arrow
     width: 17px
